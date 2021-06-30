@@ -9,4 +9,5 @@ import com.prs.business.LineItem;
 public interface LineItemRepo extends CrudRepository<LineItem, Integer> {
 
 	List<LineItem> findAllByRequestId(int id);
+
 }
