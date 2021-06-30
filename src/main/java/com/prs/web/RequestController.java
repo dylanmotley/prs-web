@@ -46,14 +46,14 @@ public class RequestController {
 	}
 
 	// TR13 Approve
-	@PostMapping("/approve")
+	@PutMapping("/approve")
 	public Request addApprovedStatus(@RequestBody Request request) {
 		request.setStatus("Approved");
 		return requestRepo.save(request);
 	}
 
 	// TR14 Reject
-	@PostMapping("/reject")
+	@PutMapping("/reject")
 	public Request addRejectedStatus(@RequestBody Request request) {
 		request.getReasonForRejection();
 		request.setStatus("Rejected");
